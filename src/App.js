@@ -30,14 +30,32 @@
 
 */
 
-import logo from './assets/logo.svg';
-import './style/App.css';
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { PageHeader, PageFooter } from "./components/components.js"
+import logo from "./assets/logo.svg"
+import "./style/App.css"
+
+
+class InitLayout extends React.Component {
+	componentDidMount() {
+		document.title = "My React WebApp" // first option
+	}
+	render() {
+		return (
+			<Helmet>
+				<title>My First React WebApp</title>
+			</Helmet>
+		) // another option
+	}
+}
 
 
 function App() {
 	return (
-		<div className="App">
-			<header className="App-header">
+		<div className="App-Main-Page">
+			<PageHeader id="cabecalho"></PageHeader>
+			<body className="App-body">
 				<img src={logo} className="App-logo" alt="logo"/>
 				<p>
 					Edit <code>src/App.js</code> and save to reload.
@@ -50,9 +68,11 @@ function App() {
 				>
 					Learn React
 				</a>
-			</header>
+			</body>
+			<PageFooter id="rodape"></PageFooter>
 		</div>
-	);
+	)
 }
 
-export default App;
+
+export { App, InitLayout }
