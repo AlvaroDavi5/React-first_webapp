@@ -1,6 +1,6 @@
 
 info:
-	@ echo 'code created using command: npx create-react-app my-app'
+	@ echo 'code created using command: npx create-react-app my_webapp'
 
 build:
 	@ echo " \033[0;34m Building...  \033[0m "
