@@ -32,8 +32,8 @@
 
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { PageBody } from "./pages/home.js"
 import { PageHeader, PageFooter } from "./components/components.js"
-import logo from "./assets/logo.svg"
 import "./style/App.css"
 
 
@@ -54,25 +54,12 @@ class InitLayout extends React.Component {
 function App() {
 	return (
 		<div className="App-Main-Page">
-			<PageHeader id="cabecalho"></PageHeader>
-			<body className="App-body">
-				<img src={logo} className="App-logo" alt="logo"/>
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</body>
-			<PageFooter id="rodape"></PageFooter>
+			<PageHeader id="component-header"></PageHeader>
+			<PageBody/>
+			<PageFooter id="component-footer" name="rodape"></PageFooter>
 		</div>
 	)
 }
 
 
-export { App, InitLayout }
+export { InitLayout, App }
