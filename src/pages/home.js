@@ -29,61 +29,39 @@ class PageBody extends React.Component {
 		}
 	}
 
+	changeSlide(change_to) {
+		let index = 0
+
+		if (this.state.actualSlide >= (this.state.slidesAmount)-1 && change_to === +1) {
+			index = 0
+		}
+		else if (this.state.actualSlide <= 0 && change_to === -1) {
+			index = (this.state.slidesAmount)-1
+		}
+		else {
+			index = (this.state.actualSlide) + change_to
+		}
+
+		this.setState(
+			{
+				actualSlide: index,
+				text: ImageList()[index][0],
+				image: ImageList()[index][1]
+			}
+		)
+	}
+
 	render() {
 		return (
 			<div className="App-body">
 				<div class="SlideShow">
-					<button class="prev" onclick={this.previousSlide}>&#10094;</button>
+					<button class="prev" onClick={() => this.changeSlide(-1)}>&#10094;</button>
 					<div class="slide-text">{this.state.text}</div>
 					<img class="slide-image" src={this.state.image} alt="universe_image"/>
 					<div class="slide-number">{this.state.actualSlide +1} / {this.state.slidesAmount}</div>
-					<button class="next" onclick={this.nextSlide}>&#10095;</button>
+					<button class="next" onClick={() => this.changeSlide(+1)}>&#10095;</button>
 				</div>
 			</div>
-		)
-	}
-
-	previousSlide() {
-		let index = 0
-
-		if (this.state.actualSlide >= (this.state.slidesAmount)-1) {
-			index = 0
-		}
-		else if (this.state.actualSlide <= 0) {
-			index = (this.state.slidesAmount)-1
-		}
-		else {
-			index = (this.state.actualSlide) - 1
-		}
-
-		this.setState(
-			{
-				actualSlide: index,
-				text: ImageList()[index][0],
-				image: ImageList()[index][1]
-			}
-		)
-	}
-
-	nextSlide() {
-		let index = 0
-
-		if (this.state.actualSlide >= (this.state.slidesAmount)-1) {
-			index = 0
-		}
-		else if (this.state.actualSlide <= 0) {
-			index = (this.state.slidesAmount)-1
-		}
-		else {
-			index = (this.state.actualSlide) + 1
-		}
-
-		this.setState(
-			{
-				actualSlide: index,
-				text: ImageList()[index][0],
-				image: ImageList()[index][1]
-			}
 		)
 	}
 }
