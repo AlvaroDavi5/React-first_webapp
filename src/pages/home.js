@@ -1,6 +1,6 @@
 import React from 'react'
-import "../style/home.css"
-import "../assets/background-universe.jpg"
+import "./style/home.css"
+import "./assets/background-universe.jpg"
 
 
 // use sample: <pageHeader id="cabecalho"/></pageHeader>
