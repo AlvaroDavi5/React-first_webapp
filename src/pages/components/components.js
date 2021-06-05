@@ -34,11 +34,9 @@ class PageFooter extends React.Component {
 		return (
 			<footer className="App-components" id={this.props.id}>
 				<p>
-					Refresh date: <strong>{this.props.refreshDate.toLocaleTimeString()}</strong>.
-				</p>
-				<br/>
-				<p>
 					Current date: <strong>{this.state.currentDate}</strong>.
+					<br/>
+					Refresh date: <strong>{this.props.refreshDate.toLocaleTimeString()}</strong>.
 				</p>
 			</footer>
 		)
@@ -56,7 +54,7 @@ class PageFooter extends React.Component {
 	}
 
 	tick() {
-		this.setState(
+		this.setState( // to re-render a component setState() method has used
 			{
 				currentDate: new Date().toLocaleTimeString() // dinamically change the property state
 			}
