@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // modules
 import { InitLayout, App } from "./App"
-import reportWebVitals from "./reportWebVitals"
+import reportWebVitals from "./reportWebVitals.ts"
 // another sources
 import "./style/index.css"
 
