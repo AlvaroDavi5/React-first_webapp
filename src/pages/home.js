@@ -28,7 +28,7 @@ class PageBody extends React.Component {
 			slidesAmount: ImageList().length
 		}
 
-		// this binding is necessary to make `this` work in the callback
+		// this binding is necessary to make `this` work in the callback instead of using arrow fuction (to pass only the class instance)
 		//this.changeSlide = this.changeSlide.bind(this)
 	}
 
