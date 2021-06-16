@@ -58,10 +58,10 @@ class PageBody extends React.Component {
 		return ( // for functions that need no arguments, use "this.functionName" and for functions that need use "() => this.functionName(arg)"
 			<div className="App-body">
 				<div class="SlideShow">
-					<button class="prev" onClick={() => this.changeSlide(-1)}>&#10094;</button>
 					<div class="slide-text">{this.state.text}</div>
 					<img class="slide-image" src={this.state.image} alt="universe_image"/>
 					<div class="slide-number">{this.state.actualSlide +1} / {this.state.slidesAmount}</div>
+					<button class="prev" onClick={() => this.changeSlide(-1)}>&#10094;</button>
 					<button class="next" onClick={() => this.changeSlide(+1)}>&#10095;</button>
 				</div>
 			</div>

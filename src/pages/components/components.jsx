@@ -34,6 +34,7 @@ class PageFooter extends React.Component {
 		return (
 			<footer className="App-components" id={this.props.id}>
 				<p>
+					<br/>
 					Current date: <strong>{this.state.currentDate}</strong>.
 					<br/>
 					Refresh date: <strong>{this.props.refreshDate.toLocaleTimeString()}</strong>.
