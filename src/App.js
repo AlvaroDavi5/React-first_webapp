@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { PageBody } from "./pages/home.js"
 import { PageHeader, PageFooter } from "./pages/components/components.jsx"
 import "./style/App.css"
