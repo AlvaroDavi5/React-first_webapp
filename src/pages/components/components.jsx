@@ -1,7 +1,12 @@
 import React from 'react'
-import "./style/components.css"
+import { Button } from 'react-bootstrap'
+import style from "./style/components.css"
 import logo from "../assets/logo.svg"
 
+
+function quoteLinus() {
+	alert("'Talk is cheap. Show me the code.' -Linus Torvalds")
+}
 
 class PageHeader extends React.Component {
 	render() {
@@ -15,6 +20,14 @@ class PageHeader extends React.Component {
 				<div id="page-title">
 					<h1>Universe Photos</h1>
 				</div>
+					<Button
+						size='lg'
+						right="20"
+						className={style.btp_button}
+						onClick={quoteLinus}
+					>
+						Dev Quote
+					</Button>
 			</header>
 		)
 	}
