@@ -1,3 +1,6 @@
+# ABOUT React JS
+React is a SPA (Single Page Application) that loads all the content and sends it to the client, which in turn will render the content stored in the buffer.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
